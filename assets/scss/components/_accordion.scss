@@ -1,0 +1,45 @@
+/* ACCORDION */
+.accordion {
+  display: grid;
+  align-content: center;
+  height: 100vh;
+
+  &_container {
+    display: grid;
+    row-gap: 0.75rem;
+    padding: 2rem 1rem;
+    background-color: var(--container-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
+  }
+  &_title {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: 400;
+    margin-top: 0.15rem;
+    transition: 0.2s;
+  }
+  &_header {
+    display: flex;
+    column-gap: 0.5rem;
+    padding: 1.25rem 1.25rem 1.25rem 1rem;
+    cursor: pointer;
+  }
+  &_description {
+    padding: 0 1.25rem 1.25rem 3rem;
+    font-size: var(--smaller-font-size);
+  }
+  &_icon {
+    font-size: 1.5rem;
+    height: max-content;
+    color: var(--title-color);
+    transition: 0.3s;
+  }
+  &_item {
+    box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
+    background-color: var(--container-color);
+    border-radius: 0.25rem;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+}
