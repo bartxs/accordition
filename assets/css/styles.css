@@ -95,3 +95,52 @@ body {
   position: relative;
   transition: all 0.25s ease;
 }
+
+.accordion_item::after {
+  content: "";
+  background-color: var(--first-color);
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.accordion_item:nth-child(1) {
+  background-color: #fff7f0;
+}
+
+.accordion_item:nth-child(1)::after {
+  background-color: #ffc08a;
+}
+
+.accordion_item:nth-child(2) {
+  background-color: #f0f0ff;
+}
+
+.accordion_item:nth-child(2)::after {
+  background-color: #8a8aff;
+}
+
+.accordion_item:nth-child(3) {
+  background-color: #fff0f3;
+}
+
+.accordion_item:nth-child(3)::after {
+  background-color: #ff8aa1;
+}
+
+.accordion_item:nth-child(4) {
+  background-color: #f0faff;
+}
+
+.accordion_item:nth-child(4)::after {
+  background-color: #8ad8ff;
+}
+
+.accordion_content {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.25s ease;
+}

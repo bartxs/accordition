@@ -12,6 +12,7 @@
     border-radius: 0.5rem;
     box-shadow: 0 12px 32px hsla(0, 0%, 20%, 0.1);
   }
+
   &_title {
     font-size: var(--small-font-size);
     color: var(--title-color);
@@ -19,27 +20,81 @@
     margin-top: 0.15rem;
     transition: 0.2s;
   }
+
   &_header {
     display: flex;
     column-gap: 0.5rem;
     padding: 1.25rem 1.25rem 1.25rem 1rem;
     cursor: pointer;
   }
+
   &_description {
     padding: 0 1.25rem 1.25rem 3rem;
     font-size: var(--smaller-font-size);
   }
+
   &_icon {
     font-size: 1.5rem;
     height: max-content;
     color: var(--title-color);
     transition: 0.3s;
   }
+
   &_item {
     box-shadow: 0 2px 6px hsla(0, 0%, 15%, 0.1);
     background-color: var(--container-color);
     border-radius: 0.25rem;
     position: relative;
+    transition: all 0.25s ease;
+
+    &::after {
+      content: "";
+      background-color: var(--first-color);
+      width: 5px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 0.25rem 0 0 0.25rem;
+    }
+
+    // Optional colors
+    &:nth-child(1) {
+      background-color: hsl(28, 100, 97);
+
+      &::after {
+        background-color: hsl(28, 100, 77);
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: hsl(240, 100, 97);
+
+      &::after {
+        background-color: hsl(240, 100, 77);
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: hsl(348, 100, 97);
+
+      &::after {
+        background-color: hsl(348, 100, 77);
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: hsl(200, 100, 97);
+
+      &::after {
+        background-color: hsl(200, 100, 77);
+      }
+    }
+  }
+
+  &_content {
+    overflow: hidden;
+    height: 0;
     transition: all 0.25s ease;
   }
 }
