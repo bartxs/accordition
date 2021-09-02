@@ -144,3 +144,39 @@ body {
   height: 0;
   transition: all 0.25s ease;
 }
+
+.accordion-open .accordion_icon {
+  transform: rotate(45deg);
+}
+
+.accordion-open .accordion_title {
+  font-weight: 600;
+}
+
+/* MEDIA QUERIES */
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .accordion_container {
+    width: 550px;
+    padding: 2.5rem;
+    justify-self: center;
+    border-radius: 0.75rem;
+  }
+  .accordion_header {
+    padding: 1.5rem;
+  }
+  .accordion_title {
+    padding-right: 3.5rem;
+  }
+  .accordion_description {
+    padding: 0 4rem 1.25rem 3.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 968px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

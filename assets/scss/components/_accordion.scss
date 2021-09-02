@@ -98,3 +98,13 @@
     transition: all 0.25s ease;
   }
 }
+
+.accordion-open {
+  & .accordion_icon {
+    transform: rotate(45deg);
+  }
+
+  & .accordion_title {
+    font-weight: 600;
+  }
+}
